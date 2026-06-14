@@ -1,4 +1,2 @@
-if(true){
-  let name1="gobinda";
-}
-console.log(name1)
+const sum=eval('10*10+5');
+// console.log(sum)
