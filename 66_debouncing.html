@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- without debouncing  -->
+  <!-- <input type="text" id="seach" placeholder="search..."/>
+
+  <script>
+    function searchData(value){
+      console.log("API call:",value)
+    }
+    document.getElementById('seach').addEventListener("input",(e)=>{
+      searchData(e.target.value)
+    })
+  </script> -->
+
+  <!-- with debouncing  -->
+  <input type="text" id="search" placeholder="Search...">
+  <script>
+    function debounce(fn, delay) {
+      let timer;
+      return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          fn(...args)
+        }, delay)
+      }
+    }
+    function searchData(value) {
+      console.log("API Call:", value);
+    }
+
+    const debouncedSearch = debounce(searchData, 500);
+    document.getElementById("search").addEventListener("input", (e) => {
+      debouncedSearch(e.target.value);
+    });
+  </script>
+</body>
+
+</html>
