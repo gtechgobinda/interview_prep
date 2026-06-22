@@ -175,6 +175,118 @@
 
 
 // QS:30
-console.log(!!null);
-console.log(!!"");
-console.log(!!1);
+// console.log(!!null); //false
+// console.log(!!""); //false
+// console.log(!!1); //true
+
+// QS:31 
+// console.log(setInterval(()=>console.log('Hi'),1000))
+// console.log(setInterval(()=>console.log('Hi'),1000))
+// console.log(setInterval(()=>console.log('Hi'),1000))
+
+// 1
+// 2
+// 3
+// Hi
+// Hi
+// Hi
+// Hi
+// Hi
+// ...
+
+// QS : 32
+// console.log([..."anil"]) //[ 'a', 'n', 'i', 'l' ]
+// console.log([...[3,6,8,0]]) //[3,6,8,0]
+
+// QS: 37
+// let data= 3+4+'5';
+// console.log(typeof data) //string
+// console.log(typeof (3+4+'5')) //string
+// console.log(typeof 3+4+'5') // number 45
+
+// QS: 38 
+// let data= 3+4+'5';
+// console.log(data) //75
+
+// QS: 39 
+// console.log(typeof (3 + 4 + +'5')) //number
+
+// QS: 40
+// console.log(typeof []) //object 
+// console.log([]==[]) //false
+// console.log([]===[]) //false
+
+// QS: 41
+// let data=[1,2,3].map(num=>{
+// if (typeof num==='number')return;
+// return num*2
+// })
+// console.log(data) //[ undefined, undefined, undefined ]
+
+// QS : 42 
+function getInfo(member){
+  member.name='Gobinda'
+}
+
+const person={name:"Kobik"};
+getInfo(person)
+console.log(person) //{ name: 'Gobinda' }
+
+// QS: 43
+function Car(){
+  this.make="tata";
+  return {make:'Kia'}
+}
+const myCar=new Car();
+console.log(myCar.make) //Kia
+
+// qs: 44
+(()=>{
+  let x=(y=10)
+})();
+console.log(typeof x) //undefined
+
+// qs: 45
+(()=>{
+  let x=y=10;
+})();
+console.log(typeof y) //number
+console.log(y) //10
+
+// qs:46
+(()=>{
+  let x=10;
+})()
+(()=>{
+  let x=10
+})()
+console.log(typeof x)
+
+
+//qs:47
+(()=>{
+  let x=y=10
+})();
+(()=>{
+  let x=y=20
+})();
+console.log(y) //20
+
+// qs:48
+let x=100;
+(()=>{
+  var x=20
+})()
+console.log(x) //100
+
+// qs:49
+console.log(!true - true) // -1
+
+// qs:50 
+console.log(true+ +"10") //11
+
+
+
+
+
+
