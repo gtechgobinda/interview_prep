@@ -52,9 +52,9 @@ console.log(forEachNumbers,"forEachNumbers") //undefined forEachNumbers
 // array.find((element,index,array)=>{
 //   return condition
 // })
-// const numbers=[5,7,8,9,10,12];
-// const result=numbers.find((num)=>num>10);
-// console.log(result,"result")
+const numbers=[5,7,8,9,10,12];
+const result=numbers.find((num)=>num>10);
+console.log(result,"result")
 
 //*------findIndex()
 // array.findIndex((element,index,array)=>{
@@ -68,16 +68,59 @@ console.log(forEachNumbers,"forEachNumbers") //undefined forEachNumbers
 // array.some((element, index, array) => {
 //   return condition;
 // });
-// const numbers=[2, 4, 6, 12]
-// const result=numbers.some((num=>num>2))
-// console.log(result,"someFn-result")
+const numbers=[2, 4, 6, 12]
+const result=numbers.some((num=>num>2))
+console.log(result,"someFn-result") //true someFn-result
 
 //*-----every()
 const numbers = [2, 4, 6, 8];
 const result=numbers.every((num)=>num>1)
 console.log(result,"everyFun")
 
+//*------includes()
+// array.includes(valueToFind, fromIndex)
 
+const fruits = ["apple", "banana", "mango"];
+const result = fruits.includes("banana");
+
+console.log(result); // true
+
+const numbers = [1, 2, 3, 4];
+console.log(numbers.includes(10)); // false
+
+
+//*------sort()
+// array.sort((a,b)=>a-b)
+const numbers = [40, 10, 100, 5];
+numbers.sort((a, b) => a - b);
+console.log(numbers); // [5, 10, 40, 100]
+// Descending
+numbers.sort((a, b) => b - a);
+console.log(numbers); // [100, 40, 10, 5]
+//Acending
+numbers.sort((a, b) => a - b);
+console.log(numbers);
+
+
+//*------slice()
+// array.slice(startIndex,endIndex)
+const numbers = [1, 2, 3, 4, 5];
+const result = numbers.slice(1, 4);
+console.log(result); // [2,3,4]
+console.log(numbers); // [1,2,3,4,5]
+
+
+//*------splice()
+// array.splice(startIndex, deleteCount, item1, item2...)
+const numbers = [1, 2, 3, 4, 5];
+const removed = numbers.splice(1, 2);
+console.log(removed); // [2,3]
+console.log(numbers); // [1,4,5]
+// Add elements
+numbers.splice(1, 0, 10, 20);
+console.log(numbers); // [1,10,20,4,5]
+
+// Original array remains unchanged
 
 // slice()
 
