@@ -120,29 +120,65 @@ console.log(numbers); // [1,4,5]
 numbers.splice(1, 0, 10, 20);
 console.log(numbers); // [1,10,20,4,5]
 
-// Original array remains unchanged
 
-// slice()
-
-// ADD
-// push()
-// concat()
-
-//REMOVE
-// pop()
-// shift()
-// splice()
+//*------concat()
+// array1.concat(array2)
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const result = arr1.concat(arr2);
+console.log(result); // [1,2,3,4,5,6]
+console.log(arr1); // [1,2,3]
 
 
-// MODIFY 
+//*------flat()
+// array.flat(depth)
+const numbers = [1, 2, [3, 4], [5, [6, 7]]];
+const result = numbers.flat();
+console.log(result); // [1,2,3,4,5,[6,7]]
+const result2 = numbers.flat(2);
+console.log(result2); // [1,2,3,4,5,6,7]
 
 
+//*------flatMap()
+// array.flatMap(callback)
+const numbers = [1, 2, 3];
+const result = numbers.flatMap((num) => [num, num * 2]);
+console.log(result);
 
-// OTHERS
-// join()
-// length()
-// sort()
-// reverse()
 
-// some()
-// every()
+//*------join()
+// array.join(separator)
+const fruits = ["apple", "banana", "mango"];
+const result = fruits.join("-");
+console.log(result); // apple-banana-mango
+console.log(fruits.join(" "));
+
+
+//*------reverse()
+// array.reverse()
+const numbers = [1, 2, 3, 4, 5];
+numbers.reverse();
+console.log(numbers); // [5,4,3,2,1]
+
+//*------push()
+// array.push(element)
+const numbers = [1, 2, 3];
+const length = numbers.push(4);
+console.log(numbers); // [1,2,3,4]
+console.log(length); // 4
+
+
+//*------pop()
+// array.pop()
+const numbers = [1, 2, 3, 4];
+const removed = numbers.pop();
+console.log(removed); // 4
+console.log(numbers); // [1,2,3]
+
+
+//*------unshift()
+// array.unshift(element)
+const numbers = [2, 3, 4];
+const length = numbers.unshift(1);
+console.log(numbers); // [1,2,3,4]
+console.log(length); // 4
