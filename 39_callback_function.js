@@ -8,3 +8,5 @@ function sayBye() {
 }
 
 greet("Gobinda", sayBye);
+// Hello Gobinda
+// Goodbye!

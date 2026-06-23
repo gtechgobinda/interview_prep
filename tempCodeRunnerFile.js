@@ -1,5 +1,5 @@
-let data=[1,2,3].map(num=>{
-if (typeof num==='number')return;
-return num*2
+const numbers=[1,2,3,4,5]
+const forEachNumbers=numbers.forEach((item)=>{
+  return item*2
 })
-console.log(data) //[ undefined, undefined, undefined ]
+console.log(forEachNumbers,"forEachNumbers")

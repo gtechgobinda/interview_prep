@@ -10,4 +10,4 @@ function outer(){
 // const counter = outer();
 // counter()
 
-outer()()
+outer()() //1
