@@ -1,4 +1,5 @@
-(()=>{
-  let x=(y=10)
-})();
-console.log(typeof x)
+let data=[1,2,3].map(num=>{
+if (typeof num==='number')return;
+return num*2
+})
+console.log(data) //[ undefined, undefined, undefined ]
